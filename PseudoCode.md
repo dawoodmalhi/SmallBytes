@@ -1,4 +1,6 @@
-# Compressor
+# Pseudocode of Lempel–Ziv–Welch (LZW)
+
+## Compressor of LZW
 
     STRING = get input symbol
     WHILE there are still input symbols DO
@@ -14,7 +16,7 @@
     Output the code for STRING
 
 
-# Decompressor
+## Decompressor of LZW
 
     Read CODE
     STRING = TABLE[CODE]   // translation table
