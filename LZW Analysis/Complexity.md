@@ -75,9 +75,9 @@ Here we let C<sub>2</sub> + C<sub>3</sub> + C<sub>4</sub> + C<sub>5</sub> = a an
 
 T(n) = an + b
 
-Same as Worst-Case, Best-Case time complexity of our algorithm is n. We write that LZW has a Best-Case running time of O(n) (pronounced as Big O of n).<br /><br />
+Same as Worst-Case, Best-Case time complexity of our algorithm is n. We write that LZW has a Best-Case running time of Ω(n) (pronounced as Big Omega of n).<br /><br />
 
-**Best_Case (Big-O) :** &nbsp; <ins>T(n) = **_O_**(n).</ins><br/>
+**Best_Case (Big-Ω) :** &nbsp; <ins>T(n) = **_Ω_**(n).</ins><br/>
 
 Hence our algorithm have linear time complexity.
 
@@ -88,6 +88,8 @@ Average-Case Time complexity of an algorithm can be calculated simply by Worst_c
 Average-Case Equation = (Worst-Case Equation + Best-Case Equation) / 2
 
 As in our case both Worst-Case and Best-case have time complexity of n so it is obvious Average-Case will have the same.
+
+**Average_Case (Big-θ) :** &nbsp; <ins>T(n) = **_θ_**(n).</ins><br/>
 
 ### *Space Complexity*
 
@@ -160,9 +162,9 @@ To compute T(n), the running time of LZW on an input of n characters, we sum the
 
 Here we let C<sub>4</sub> + C<sub>5</sub> + C<sub>6</sub> + C<sub>8</sub> + C<sub>9</sub> + C<sub>10</sub> + C<sub>11</sub> = a and C<sub>1</sub> + C<sub>2</sub> + C<sub>3</sub> - C<sub>5</sub> - C<sub>6</sub> - C<sub>8</sub> - C<sub>9</sub> - C<sub>10</sub> - C<sub>11</sub> = b
 
-Same as Worst-Case, Best-Case time complexity of our algorithm is n. We write that LZW has a Best-Case running time of O(n) (pronounced as Big O of n).<br /><br />
+Same as Worst-Case, Best-Case time complexity of our algorithm is n. We write that LZW has a Best-Case running time of Ω(n) (pronounced as Big Omega of n).<br /><br />
 
-**Best_Case (Big-O) :** &nbsp; <ins>T(n) = **_O_**(n).</ins><br/>
+**Best_Case (Big-Ω) :** &nbsp; <ins>T(n) = **_Ω_**(n).</ins><br/>
 
 Hence our algorithm have linear time complexity.
 
@@ -173,6 +175,8 @@ Average-Case Time complexity of an algorithm can be calculated simply by Worst_c
 Average-Case Equation = (Worst-Case Equation + Best-Case Equation) / 2
 
 As in our case both Worst-Case and Best-case have time complexity of n so it is obvious Average-Case will have the same.
+
+**Average_Case (Big-θ) :** &nbsp; <ins>T(n) = **_θ_**(n).</ins><br/>
 
 ### *Space Complexity*
 
