@@ -7,12 +7,12 @@ const outputFile = "tested.txt";
 
 let data = fs.readFileSync(inputFile, 'utf8');
 
-let EncodedData = compress.encode(data);
+let EncodedData = compress.compressorLZW(data)
 
-//fs.writeFileSync(outputFile, EncodedData);
+fs.writeFileSync(outputFile, EncodedData);
 
-let DecodedData = decompress.decode(EncodedData)
+// let DecodedData = decompress.decode(EncodedData)
 
-//fs.writeFileSync(outputFile, DecodedData);
+// //fs.writeFileSync(outputFile, DecodedData);
 
-console.log(DecodedData);
+// console.log(DecodedData);
