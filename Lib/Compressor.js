@@ -23,7 +23,8 @@ module.exports.compressorLZW = input => {
     return output;
 }
 
-// module.exports.encode = Data =>
+// Tayyab Code
+// module.exports.compress = Data =>
 // {
 //     try
 //     {
