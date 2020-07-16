@@ -25,7 +25,6 @@ module.exports.decode = dataAsText =>
             code++;
             oldPhrase = phrase;
         }
-        
         return out;
     }
     catch (error)
