@@ -1,4 +1,4 @@
-module.exports.decode = dataAsText =>
+module.exports.decompress = dataAsText =>
 {
     try
     {
