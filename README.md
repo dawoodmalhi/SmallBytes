@@ -1,5 +1,13 @@
 <!-- 4th Semester Final Project AOA -->
-# SmallBytes
+<p align="center">
+  <a href="#">
+    <img
+      alt="SmallBytes"
+      src="SmallBytesLogo.SVG?raw=true"
+      width="400"
+    />
+  </a>
+</p>
 
  SmallBytes is a responsive web-app that is use to **compress /  decompress** files containing different formats. These are some formats that it will **compress / decompress** :
 
