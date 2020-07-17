@@ -3,11 +3,12 @@
   <a href="#">
     <img
       alt="SmallBytes"
-      src="SmallBytesLogo.SVG"
+      src="./SmallBytesLogo.SVG"
       width="400"
     />
   </a>
 </p>
+
  SmallBytes is a responsive web-app that is use to **compress /  decompress** files containing different formats. These are some formats that it will **compress / decompress** :
 
 - PDF
