@@ -1,47 +1,23 @@
 const fs = require('fs');
-const compress = require('../lib/Compressor')
-const decompress = require('../lib//Decompressor')
-const multer = require('multer');
+const compress = require("../lib/Compressor")
+const decompress = require("../lib/Decompressor")
 
-// const inputFile = "test.txt";
-// const outputFile = "tested.txt";
+const inputFile = "testSmall.txt";
+const outputFile = "testResult.txt";
 
 // let data = fs.readFileSync(inputFile, 'utf8');
 
-// let EncodedData = compress.compressorLZW(data)
+//let data = "abacabcabc";
+// Expected output = [97,98,97,99,256,259,98,99]
 
-// fs.writeFileSync(outputFile, EncodedData);
+let EncodedData = compress.compressorLZW(data)
 
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-      cb(null, '../uploads')
-    },
-    filename: function (req, file, cb) {
-      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
-      cb(null, file.fieldname + '-' + uniqueSuffix)
-    }
-  })
-  
-  var upload = multer({ storage: storage });
+let outputToBeWritten = EncodedData.join('\r\n');
 
-  var multer = require('multer')
-var upload = multer().single('avatar')
+fs.writeFileSync(outputFile, outputToBeWritten);
 
-app.post('/profile', function (req, res) {
-  upload(req, res, function (err) {
-    if (err instanceof multer.MulterError) {
-      // A Multer error occurred when uploading.
-    } else if (err) {
-      // An unknown error occurred when uploading.
-    }
+// let DecodedData = decompress.decompressorLZW(EncodedData)
 
-    // Everything went fine.
-  })
-})
-
-
-// let DecodedData = decompress.decode(EncodedData)
-
-// //fs.writeFileSync(outputFile, DecodedData);
+// fs.writeFileSync(outputFile, DecodedData);
 
 // console.log(DecodedData);
