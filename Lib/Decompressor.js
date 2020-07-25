@@ -1,4 +1,4 @@
-module.exports.decompress = dataAsText =>
+module.exports.decompressorLZW = dataAsText =>
 {
     try
     {
