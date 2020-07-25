@@ -1,31 +1,34 @@
-module.exports.decompressorLZW = dataAsText =>
+module.exports.decompressorLZW = compress =>
 {
     try
     {
-        let data = [dataAsText].map(e => e.codePointAt(0)),
-            dictionary = {},
-            currentChar = String.fromCodePoint(data[0]),
-            oldPhrase = currentChar,
-            out = [currentChar],
-            code = 57344,
-            phrase;
-        
+        let dict = new Map();
+        let data = Array.from(compress + "");       // Slicing data into characters
+        let currChar = data[0];
+        let oldPhrase = currChar;
+        let decompress = [currChar];                // Output Array
+        let code = 256;
+        let phrase;
+
         for (let i = 1; i < data.length; i++)
         {
-            let currentCode = data[i];
-            
-            if (currentCode < 57344)
-                phrase = String.fromCodePoint(data[i]);
+            let currCode = data[i].codePointAt(0);  // Converting back form bytes to ASCII
+
+            if (currCode < 256)
+                phrase = data[i]; 
             else
-                phrase = dictionary[currentCode] ? dictionary[currentCode] : (oldPhrase + currentChar);
-        
-            out += phrase;
-            currentChar = phrase[0];
-            dictionary[code] = oldPhrase + currentChar;
+                phrase = dict.has(currCode) ? dict.get(currCode) : (oldPhrase + currChar);
+            decompress.push(phrase);
+            let cp = phrase.codePointAt(0);
+            currChar = String.fromCodePoint(cp);    // Converting it into byte
+            dict.set(code, oldPhrase + currChar);
             code++;
+          
+            if (code === 0xd800)
+                code = 0xe000;
             oldPhrase = phrase;
         }
-        return out;
+      return decompress.join("");
     }
     catch (error)
     {

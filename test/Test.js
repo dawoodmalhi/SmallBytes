@@ -21,7 +21,7 @@ function decode_utf8(s) {
     }).join(''));
 }
 
-let data = fs.readFileSync(largeFile, 'utf8');
+let data = fs.readFileSync(smallFile, 'utf8');
 let EncodedData = compress.compressorLZW((data))
 fs.writeFileSync(outputFile, EncodedData);
 

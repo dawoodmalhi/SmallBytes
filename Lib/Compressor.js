@@ -5,7 +5,7 @@ module.exports.compressorLZW = input =>
         if (!input) return input;       // Checking the empty input
 
         let dict = new Map();                         // Creating a Key, Value pair Object
-        let data = (input + "").split("");            // Slicing data into characters 
+        let data = Array.from(input + "");            // Slicing data into characters 
         let compressed = [];                          // Output Array
         let currChar;
         let phrase = data[0];                         // Works as an element of dictionary
@@ -19,9 +19,9 @@ module.exports.compressorLZW = input =>
             if (dict.has(phrase + currChar))            // If dictionary has that combination of characters just add it into phrase
                 phrase += currChar;
             else
-            {                                           // if phrase is consisted on single letter push unicode of it else get it from dict 
+            {                                           // If phrase is consisted on single letter push ASCII of it else get it from dict 
                 compressed.push (phrase.length > 1 ? dict.get(phrase) : phrase.codePointAt(0));
-                dict.set(phrase + currChar, code);      // Set code in dictionary
+                dict.set(phrase + currChar, code);      // Set value to new combination in dictionary
                 code++;
 
                 if (code === 0xd800)
@@ -31,7 +31,7 @@ module.exports.compressorLZW = input =>
         }
         compressed.push (phrase.length > 1 ? dict.get(phrase) : phrase.codePointAt(0));
         
-        for (let i = 0; i < compressed.length; i++)      // converting it into byte
+        for (let i = 0; i < compressed.length; i++)      // Converting it into byte
             compressed[i] = String.fromCodePoint(compressed[i]);
 
         return compressed.join("");
