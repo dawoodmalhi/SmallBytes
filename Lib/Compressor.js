@@ -2,31 +2,28 @@ module.exports.compressorLZW = input =>
 {
     try
     {
+        if (!input) return input;       // Checking the empty input
 
-        // initializing Dictionary of ASCII extended characters
-        let dicCapacity = 256;
-        let dictionary = {};
-       
-        let series = input[0];
-        let output = [];
+        var dict = []
+        var data = (input + "").split("");             // Slicing data into characters 
+        var compressed = [];                           // Output Array
+        var currChar;
+        var phrase = data[0];                         // Works as an element of dictionary
+        var code = 256;                               // Starting Dictionary
 
-        let temp = series+input[1];
 
-        //console.log(temp);
-
-        for (let i=0; i <= dicCapacity; ++i)
-            dictionary[String.fromCharCode(i)] = i
-
-        for(let i=1; i< input.length; ++i){
-            if(series+input[i] in dictionary)
-                series += input[i];
-            else{
-                dictionary[series+input[i]] = dicCapacity++;
-                output.push(dictionary[series]);
-                series = input[i];
+        for(let i=1; i< input.length; i++)
+        {
+            if (dict.has(phrase + currChar))            // If dictionary has that combination of characters just add it into phrase
+                phrase += currChar;
+            else
+            {
+                dictionary[phrase+input[i]] = code++;
+                output.push(dictionary[phrase]);
+                phrase = input[i];
             }
         }
-        output.push(dictionary[series]);
+        output.push(dictionary[phrase]);
         output.join('');
         return output;
     }
