@@ -1,0 +1,11 @@
+/* fonts */
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+/* general styles */
+.body {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    max-width: 1519px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  
