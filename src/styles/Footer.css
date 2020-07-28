@@ -1,0 +1,6 @@
+.social-logo, .user-name{
+    transition: all ease-in 0.2s;
+}
+.social-logo:hover, .user-name:hover{
+    color: #db2d2c;
+}
