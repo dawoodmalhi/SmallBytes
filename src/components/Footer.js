@@ -9,6 +9,8 @@ class Footer extends React.Component {
                     <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
                         <p class="text-sm text-gray-500 sm:py-2 sm:mt-0 mt-4">© 2020 SmallBytes —
                             <a href="https://github.com/dawoodmalhi" class="text-gray-600 ml-1 user-name" rel="noopener noreferrer" target="_blank">@dawoodmalhi</a>
+                            &nbsp;
+                            <a href="https://github.com/TayyabAsghar" class="text-gray-600 ml-1 user-name" rel="noopener noreferrer" target="_blank">@tayyabasghar</a>
                         </p>
                         <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
                             <a href="https://www.facebook.com/MrDawoodMalhi/" class="text-gray-500 social-logo">
