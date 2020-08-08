@@ -1,6 +1,7 @@
 import React from "react";
 import MainPage from "./pages/MainPage";
 import CompressorPage from "./pages/CompressorPage";
+import invalidLink from "./pages/InvalidLink";
 import {
     BrowserRouter as Router,
     Route,
@@ -20,6 +21,8 @@ class App extends React.Component {
                         path="/compresser"
                         component={CompressorPage}
                     />
+                    <Route exact path="/404" component={invalidLink} />
+                    <Redirect to="/404" />
                 </Switch>
             </Router>
         );
