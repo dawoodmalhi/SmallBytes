@@ -27,15 +27,15 @@ class IntroBanner extends React.Component {
                             </p>
                             <strong className="text-2xl mb-2">We Support following formats</strong>
                             <div className="flex justify-center text-2xl text-gray-600">
-                                <a href="#" className="formats">TXT</a>
+                                <a href="#" className="formats mx-1">TXT</a>
                                 <div className="border-l-2 border-gray-700 m-2"></div>
-                                <a href="#" className="formats">TXT</a>
+                                <a href="#" className="formats mx-1">TIFF</a>
                                 <div className="border-l-2 border-gray-700 m-2"></div>
-                                <a href="#" className="formats">TXT</a>
+                                <a href="#" className="formats mx-1">GIF</a>
                             </div>
                         </div>
                         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-                            <img className="object-cover object-center rounded" alt="App Logo" src={logo}></img>
+                            <img className="object-cover object-center rounded" alt="AppLogo" src={logo}></img>
                         </div>
                     </div>
                 </section>

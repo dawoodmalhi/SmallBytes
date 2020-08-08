@@ -1,13 +1,13 @@
-.mr-5{
+.nav-bar .mr-5{
   transition: all ease-in 0.2s;
 }
-.mr-5:hover{
+.nav-bar .mr-5:hover{
   color: #ee3233;
 }
-.bg-gray-200{
+.nav-bar .bg-gray-200{
   transition: all ease-in 0.3s;
 }
-.bg-gray-200:hover{
+.nav-bar .bg-gray-200:hover{
   background-color: #db2d2c;
   color: white;
 }
