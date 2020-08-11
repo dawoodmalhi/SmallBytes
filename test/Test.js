@@ -1,7 +1,14 @@
-const encode = require('../lib/Arithmetic-Coding/encode')
-const decode = require('../lib/Arithmetic-Coding/decode')
-const path = require('path')
+const LZW = require("../lib/LZW")
+const fs = require("fs");
+const path = require('path');
 
-encode.encode(path.resolve(__dirname, './testLarge.txt'), path.resolve(__dirname, './short-encoded.ac'))
+let inputFile = path.resolve(__dirname, './testLarge.txt');
+let outputFile = path.resolve(__dirname, './done.lzwtxt');
+let doneFile = path.resolve(__dirname, './done.txt');
 
-decode.decode(path.resolve(__dirname, './short-encoded.ac'), path.resolve(__dirname, './tested.txt'))
+let compressed = LZW.compress(fs.readFileSync(inputFile, 'binary'));
+fs.writeFileSync(outputFile, compressed, 'ucs2')
+
+
+let decompressed = LZW.decompress(fs.readFileSync(outputFile, 'ucs2'));
+fs.writeFileSync(doneFile, decompressed, 'binary');
