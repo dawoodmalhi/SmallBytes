@@ -4,16 +4,16 @@ import Navbar from "../components/NavBar";
 import ComDecomBanner from "../components/ComDecomBanner";
 import Footer from "../components/Footer";
 
-class CompressorPage extends React.Component {
+class DecompressorPage extends React.Component {
 	render() {
 		return (
 			<div className="body">
 				<Navbar />
-				<ComDecomBanner mode="Compress" />
+				<ComDecomBanner mode="Decompress" />
 				<Footer />
 			</div>
 		);
 	}
 }
 
-export default CompressorPage;
+export default DecompressorPage;

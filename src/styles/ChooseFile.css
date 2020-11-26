@@ -1,15 +1,21 @@
 .choose-file .wrapper {
-    background-color: #ee3233;
+	background-color: #ee3233;
 }
 
 .choose-file .wrapper .container {
-    background-color: #db2d2c;
+	background-color: #db2d2c;
 }
 
 .choose-file .wrapper .container .choose-file-button {
-    transition: all ease-out 0.2s;
+	transition: all ease-out 0.2s;
 }
 
 .choose-file .wrapper .container .choose-file-button:hover {
-    background-color: rgb(240, 240, 240);
+	background-color: rgb(240, 240, 240);
+}
+.choose-file .display-none {
+	display: none;
+}
+.choose-file .compress-file-button {
+	background-color: #ee3233;
 }
