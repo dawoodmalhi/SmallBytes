@@ -1,18 +1,14 @@
-const fs = require('fs');
-const compress = require("../lib/Compressor")
-const decompress = require("../lib//Decompressor")
+const LZW = require("../lib/LZW")
+const fs = require("fs");
+const path = require('path');
 
-const inputFile = "test.txt";
-const outputFile = "tested.txt";
+let inputFile = path.resolve(__dirname, './testLarge.txt');
+let outputFile = path.resolve(__dirname, './done.lzwtxt');
+let doneFile = path.resolve(__dirname, './done.txt');
 
-let data = fs.readFileSync(inputFile, 'utf8');
+let compressed = LZW.compress(fs.readFileSync(inputFile, 'binary'));
+fs.writeFileSync(outputFile, compressed, 'ucs2')
 
-let EncodedData = compress.compressorLZW(data)
 
-fs.writeFileSync(outputFile, EncodedData);
-
-// let DecodedData = decompress.decode(EncodedData)
-
-// //fs.writeFileSync(outputFile, DecodedData);
-
-// console.log(DecodedData);
+let decompressed = LZW.decompress(fs.readFileSync(outputFile, 'ucs2'));
+fs.writeFileSync(doneFile, decompressed, 'binary');
