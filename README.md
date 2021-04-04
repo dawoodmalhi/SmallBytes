@@ -3,7 +3,7 @@
   <a href="#">
     <img
       alt="SmallBytes"
-      src="SmallBytesLogo.SVG?raw=true"
+      src="client/SmallBytesLogo.SVG?raw=true"
       width="400"
     />
   </a>
