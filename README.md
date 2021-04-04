@@ -9,13 +9,12 @@
   </a>
 </p>
 
- SmallBytes is a responsive web-app that is use to **compress /  decompress** files containing different formats. These are some formats that it will **compress / decompress** :
+ SmallBytes is a responsive web-app that is use to **compress /  decompress** files containing different formats. It **compress / decompress** following formats:
 
-- PDF
 - TXT
-- PNG
-- JPG
 - TIFF
 
-The Compression Algorithm that is used in *SmallBytes* is **Lempel-Ziv** compression which is a Dictionary-based algorithm.
+The Compression Algorithm that is used in *SmallBytes* is **Lempel-Ziv** compression which is a Dictionary-based algorithm. I created this Web app as 4th Smester Project of AOA(subject).
+
+**Live Build**: https://small-bytes-dawoodmalhi.vercel.app
 <!-- Still need to write about analysis data in file -->
