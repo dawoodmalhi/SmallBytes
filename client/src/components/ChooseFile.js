@@ -94,7 +94,3 @@ class ChooseFile extends React.Component {
 }
 
 export default ChooseFile;
-
-{
-	/* */
-}
