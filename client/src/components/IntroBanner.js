@@ -29,6 +29,7 @@ class IntroBanner extends React.Component {
 								<a
 									href="https://github.com/TayyabAsghar/CS311S20PID48"
 									target="_blank"
+									rel="noopener noreferrer"
 									className="project-link"
 								>
 									here
