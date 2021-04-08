@@ -14,7 +14,7 @@
 - TXT
 - TIFF
 
-The Front-End of the App is made in [ReactJS](https://github.com/topics/react-js). Also a CSS framework [Tailwind CSS](https://github.com/topics/tailwind) is used here for styling. The Compression Algorithm that is used in *SmallBytes* is **Lempel-Ziv** compression which is a Dictionary-based algorithm. I created this Web app as 4th Smester Project of AOA(subject).
+The Front-End of the App is made in [ReactJS](https://github.com/topics/react-js). Also a CSS framework [Tailwind CSS](https://github.com/topics/tailwind) is used here for styling. The Compression Algorithm that is used in *SmallBytes* is **Lempel-Ziv** compression which is a Dictionary-based algorithm. I made this app for a University Project.
 
 **Front-end Demo**: https://small-bytes-dawoodmalhi.vercel.app
 <!-- Still need to write about analysis data in file -->
